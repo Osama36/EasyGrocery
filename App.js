@@ -8,7 +8,5 @@ export default function App() {
   return (
     <DefaultStack />
   //  <VendorDrawer />
-
-    // <LoginStack />
   );
 }

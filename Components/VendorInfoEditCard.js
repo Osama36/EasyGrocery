@@ -8,7 +8,6 @@ import {
   Button,
 } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
-import { color } from "react-native-reanimated";
 import { MaterialIcons } from "@expo/vector-icons";
 
 const { width, height } = Dimensions.get("window");

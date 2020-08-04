@@ -5,7 +5,6 @@ import {
   View,
   Dimensions,
   ImageBackground,
-  Button,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { ScrollView } from "react-native-gesture-handler";
@@ -43,58 +42,61 @@ export default function Item({ navigation }) {
           top: height * 0.03,
         }}
       />
+      <ImageBackground source={require('../assets/patternbg.jpg')} style={{width , height,position :"absolute", zIndex: -1}} /> 
+        <View style={styles.itemHead}>
+          <Text style={{ fontSize: height * 0.04, color: "#c74b36" }}>
+            Item Name
+          </Text>
+          <Text style={{ fontSize: height * 0.06, color: "#c74b36" }}>
+            {" "}
+            99$
+          </Text>
+        </View>
+        <View style={styles.itemStore}>
+          <MaterialIcons
+            name="star"
+            size={height * 0.04}
+            style={{ color: "#c74b36" }}
+          />
 
-      <View style={styles.itemHead}>
-        <Text style={{ fontSize: height * 0.04, color: "#c74b36" }}>
-          Item Name
-        </Text>
-        <Text style={{ fontSize: height * 0.06, color: "#c74b36" }}> 99$</Text>
-      </View>
-      <View style={styles.itemStore}>
-        <MaterialIcons
-          name="star"
-          size={height * 0.04}
-          style={{ color: "#c74b36" }}
-        />
+          <Text style={{ fontSize: height * 0.03 }}>John's Mart</Text>
+        </View>
+        <View style={styles.itemDesc}>
+          <Text style={{ fontSize: width * 0.035, paddingTop: height * 0.01 }}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+          </Text>
+        </View>
 
-        <Text style={{ fontSize: height * 0.03 }}>John's Mart</Text>
-      </View>
-      <View style={styles.itemDesc}>
-        <Text style={{ fontSize: width * 0.035, paddingTop: height * 0.01 }}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages,
-        </Text>
-      </View>
-
-      <View style={styles.scroll}>
-        <Text
-          style={{ fontSize: height * 0.03, marginVertical: height * 0.01 }}
-        >
-          Similar Item's
-        </Text>
-        <ScrollView horizontal>
-          <View style={{ width: width * 0.43, padding: 5 }}>
-            <ItemCard name="Item A" />
-          </View>
-          <View style={{ width: width * 0.43, padding: 5 }}>
-            <ItemCard name="Item B" />
-          </View>
-          <View style={{ width: width * 0.43, padding: 5 }}>
-            <ItemCard name="Item C" />
-          </View>
-          <View style={{ width: width * 0.43, padding: 5 }}>
-            <ItemCard name="Item D" />
-          </View>
-          <View style={{ width: width * 0.43, padding: 5 }}>
-            <ItemCard name="Item E" />
-          </View>
-        </ScrollView>
-      </View>
+        <View style={styles.scroll}>
+          <Text
+            style={{ fontSize: height * 0.03, marginVertical: height * 0.01 }}
+          >
+            Similar Item's
+          </Text>
+          <ScrollView horizontal>
+            <View style={{ width: width * 0.43, padding: 5 }}>
+              <ItemCard name="Item A" />
+            </View>
+            <View style={{ width: width * 0.43, padding: 5 }}>
+              <ItemCard name="Item B" />
+            </View>
+            <View style={{ width: width * 0.43, padding: 5 }}>
+              <ItemCard name="Item C" />
+            </View>
+            <View style={{ width: width * 0.43, padding: 5 }}>
+              <ItemCard name="Item D" />
+            </View>
+            <View style={{ width: width * 0.43, padding: 5 }}>
+              <ItemCard name="Item E" />
+            </View>
+          </ScrollView>
+        </View>
     </View>
   );
 }
